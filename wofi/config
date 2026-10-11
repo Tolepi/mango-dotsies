@@ -1,0 +1,11 @@
+# Configuración principal de Wofi
+mode=drun
+show=drun
+width=500
+height=350
+always_parse_args=true
+show_all=true
+print_command=true
+layer=top
+insensitive=true
+prompt=>

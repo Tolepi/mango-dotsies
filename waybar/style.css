@@ -1,0 +1,63 @@
+/* Reset global: monocromo puro, bordes rectos sin curvas */
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "Maple Mono";
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+/* Contenedor principal: fondo negro, texto blanco y borde fino blanco */
+window#waybar {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+/* Icono de Gentoo: bloque blanco con texto/icono negro invertido */
+#custom-prefix {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0 8px;
+}
+
+/* Separadores grises de alto contraste */
+#custom-sep {
+    color: #555555;
+    padding: 0 4px;
+}
+
+/* Reloj */
+#clock {
+    color: #ffffff;
+    padding: 0 6px;
+}
+
+/* Título de la ventana activa en el centro */
+#custom-window {
+    color: #cccccc;
+    padding: 0 10px;
+}
+
+/* Módulos de estado (Red, Audio, Batería) */
+#custom-network, 
+#custom-pulseaudio, 
+#battery {
+    color: #e0e0e0;
+    padding: 0 4px;
+}
+
+/* Estados de advertencia/desconexión en escala de grises invertida */
+#custom-network.disconnected,
+#custom-pulseaudio.muted {
+    color: #888888;
+    text-decoration: line-through;
+}
+
+/* Bandeja de sistema integrada */
+#tray {
+    padding: 0 6px;
+    background-color: #111111;
+    border-left: 1px solid #333333;
+}

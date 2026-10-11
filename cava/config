@@ -1,0 +1,35 @@
+[general]
+autosens = 1
+bars = 0
+bar_width = 2
+bar_spacing = 1
+
+[input]
+method = pulse
+source = default
+
+[output]
+method = noncurses
+channels = stereo
+mono_option = average
+reverse = 0
+
+[color]
+# Desactivamos colores del sistema para usar gradiente personalizado
+foreground = '#FFFFFF'
+
+# Gradiente de Blanco a Gris Oscuro (Efecto Desvanecido)
+gradient = 1
+gradient_count = 8
+gradient_color_1 = '#FFFFFF'
+gradient_color_2 = '#E0E0E0'
+gradient_color_3 = '#C0C0C0'
+gradient_color_4 = '#A0A0A0'
+gradient_color_5 = '#808080'
+gradient_color_6 = '#606060'
+gradient_color_7 = '#404040'
+gradient_color_8 = '#202020'
+
+
+[smoothing]
+noise_reduction = 77

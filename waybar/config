@@ -1,0 +1,70 @@
+{
+    "ipc": false,
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "margin-top": 8,
+    "margin-left": 250,
+    "margin-right": 250,
+
+    "modules-left": [
+        "custom/prefix",
+        "custom/sep",
+        "clock"
+    ],
+
+    "modules-center": [
+        "custom/window"
+    ],
+
+    "modules-right": [
+        "custom/network",
+        "custom/sep",
+        "custom/pulseaudio",
+        "custom/sep",
+        "battery",
+        "custom/sep"
+    ],
+
+    "custom/prefix": {
+        "format": "  ",
+        "tooltip": false
+    },
+
+    "custom/sep": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "interval": 1,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    /* Reemplazo de 'window' usando hyprctl/swaymsg o un wrapper si aplica, o xdotool */
+    "custom/window": {
+        "exec": "xtitle 2>/dev/null || echo 'Welcome home, my dear.'",
+        "interval": 2,
+        "format": "{}"
+    },
+
+    /* Reemplazo de 'network' mediante /sys o nmcli/ip */
+    "custom/network": {
+        "exec": "nmcli -t -f CONNECTED,SSID dev wifi 2>/dev/null | grep '^sí' | cut -d: -f2 || echo 'NET OK'",
+        "interval": 5,
+        "format": "󰤨 {}"
+    },
+
+    /* Reemplazo de 'pulseaudio' mediante wpctl o pactl */
+    "custom/pulseaudio": {
+        "exec": "wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null | awk '{print int($2*100)\"%\"}' || pactl get-sink-volume @DEFAULT_SINK@ | awk '/Volume/ {print $5}'",
+        "interval": 1,
+        "format": "󰕾 {}"
+    },
+
+    "battery": {
+        "format": "󰁹 {capacity}%",
+        "format-charging": "󰂄 {capacity}%"
+    }
+}

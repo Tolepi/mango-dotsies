@@ -1,0 +1,66 @@
+/* Reset general y tipografía rígida */
+* {
+    font-family: "Maple Mono";
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 0px;
+    font-style: italic; /* Cero curvas */
+}
+
+/* Ventana principal: marco rectangular azul oscuro */
+window {
+    margin: 0px;
+    background-color: #000000;
+    border: 2px solid #ffffff;
+}
+
+/* Contenedor interno */
+#outer-box {
+    margin: 10px;
+    background-color: #000000;
+}
+
+/* Caja de búsqueda: marco verde oscuro */
+#input {
+    margin: 5px;
+    padding: 6px 10px;
+    border: 1px solid #ffffff;
+    color: #e0e0e0;
+    background-color: #080808;
+}
+
+#input:focus {
+    border: 1px solid #4ab06a;
+    outline: none;
+}
+
+/* Lista de resultados */
+#scroll {
+    margin: 5px 0px;
+}
+
+#text {
+    margin: 3px;
+    color: #ffffff;
+}
+
+/* Estilo para cada elemento de la lista */
+#entry {
+    padding: 6px 10px;
+    background-color: #000000;
+}
+
+/* Elemento seleccionado: fondo azul oscuro con marco aclarado */
+#entry:selected {
+    background-color: #787878;
+    border: 1px solid #404040;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+}
+
+/* Ocultar iconos si no se necesitan */
+#img {
+    margin-right: 8px;
+}
